@@ -1,5 +1,10 @@
 function Tasklist() {
-  return <>TODO: tasklist</>;
+  return (
+    <div className="flex justify-center">
+      <span>tasks</span>
+      <button>+</button>
+    </div>
+  );
 }
 
 export default Tasklist;

@@ -1,7 +1,7 @@
-function Button() {
+function Button(props) {
   return (
     <div className="card-actions justify-center">
-      <button className="btn btn-wide">START</button>
+      <button className="btn btn-wide">{props.text}</button>
     </div>
   );
 }

@@ -1,7 +1,17 @@
-function Title() {
+function Title(props) {
   return (
     <>
-      <h2 className="card-title justify-center">h1</h2>
+      {props.hasButtonGroup ? (
+        <div class="flex gap-2 justify-center">
+          <button class="btn btn-primary">pomodoro</button>
+          <button class="btn btn-secondary">short break</button>
+          <button class="btn btn-accent">long break</button>
+        </div>
+      ) : (
+        <div class="flex justify-center">
+          <h4>Time to focus!</h4>
+        </div>
+      )}
     </>
   );
 }
