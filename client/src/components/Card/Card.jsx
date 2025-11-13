@@ -4,11 +4,9 @@ import MainSection from "./MainSection";
 function Card() {
   return (
     <>
-      <div>
-        <Title></Title>
-        <MainSection></MainSection>
-        <Button></Button>
-      </div>
+      <Title></Title>
+      <MainSection></MainSection>
+      <Button></Button>
     </>
   );
 }
