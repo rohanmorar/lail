@@ -1,7 +1,11 @@
 function Heading(props) {
   return (
     <div className="navbar">
-      <div className={"border-b border-b-gray-200 py-8 " + props.styling}>
+      <div
+        className={
+          "border-b border-b-gray-200 py-8 container mx-auto px-32 flex justify-between items-center"
+        }
+      >
         <div className="flex-1">
           <a className="btn btn-ghost text-xl">lail</a>
         </div>
