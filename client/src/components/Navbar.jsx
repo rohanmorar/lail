@@ -1,18 +1,22 @@
-function Heading(props) {
+import { BrowserRouter, Link, Routes, Route } from "react-router-dom";
+import logo from "../assets/lail.png";
+function Navbar(props) {
   return (
     <div className="navbar">
       <div
         className={
-          "border-b border-b-gray-200 py-8 container mx-auto px-32 flex justify-between items-center"
+          "border-b border-b-gray-600 py-8 container mx-auto px-32 flex justify-between items-center"
         }
       >
         <div className="flex-1">
-          <a className="btn btn-ghost text-xl">lail</a>
+          <Link to="/" className="btn btn-ghost text-xl">
+            <img src={logo} width="42" height="42"></img>
+          </Link>
         </div>
         <div className="flex-none">
           <ul className="menu menu-horizontal gap-x-6">
             <li>
-              <a>report</a>
+              <Link to="/pomodoro">pomodoro</Link>
             </li>
             <li>
               <a>settings</a>
@@ -40,4 +44,4 @@ function Heading(props) {
   );
 }
 
-export default Heading;
+export default Navbar;

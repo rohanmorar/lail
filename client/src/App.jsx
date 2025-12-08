@@ -1,14 +1,22 @@
 import { useEffect, useState } from "react";
+import Layout from "./pages/Layout";
+import Home from "./pages/Home";
+import NoPage from "./pages/NoPage";
 import "./App.css";
-import Heading from "./components/Card/Heading";
-import Body from "./components/card/Body";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Pomodoro from "./components/Pomodoro/Pomodoro";
 
 function App() {
   return (
-    <>
-      <Heading></Heading>
-      <Body></Body>
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path="pomodoro" element={<Pomodoro />} />
+          <Route path="*" element={<NoPage />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 
